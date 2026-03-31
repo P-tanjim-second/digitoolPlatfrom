@@ -5,7 +5,7 @@ import { Play } from 'lucide-react';
 const Banner = () => {
     return (
         <div className='max-w-11/12 mx-auto flex flex-col-reverse lg:flex-row justify-between items-center gap-10 mt-10 lg:mt-20'>
-            <div className='space-y-8'>
+            <div className='space-y-8 flex flex-col justify-between items-center lg:items-baseline'>
                 <div className='space-y-4 flex flex-col items-center lg:items-baseline text-center lg:text-left'>
                     <div className='bg-[#e1e7ff] w-fit rounded-full text-[#4f39f6] py-1 px-4 flex gap-3 justify-center items-center font-semibold'>
                         <div className='w-2 h-2 bg-[#9514fa] rounded-full shadow-[0px_0px_5px_5px_#cf91ff]'></div>

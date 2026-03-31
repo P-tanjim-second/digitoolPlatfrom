@@ -11,7 +11,7 @@ const Navbar = () => {
 
     return (
         <div className="navbar bg-base-100 shadow-sm sticky">
-            <div className='navbar max-w-11/12 mx-auto flex p-0'>
+            <div className='navbar w-[95%] lg:max-w-11/12 mx-auto flex p-0'>
                 <div className="navbar-start h-full">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -21,18 +21,21 @@ const Navbar = () => {
                             tabIndex="-1"
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
                             {links.map((link, i) => <NavLinks key={i} link={link}></NavLinks>)}
+                            <div className='indicator'>
+                                <span className={`indicator-item bg-secondary w-4 h-4 translate-x-1/3 rounded-full text-white flex items-center justify-center text-[12px] ${cartNum == 0 ? "hidden" : ""}`}>{cartNum}</span>
+                                <li><a className='hover:text-black/50 transition-colors cursor-pointer'><ShoppingCart size={14} /> Cart</a></li></div>
                         </ul>
                     </div>
-                    <h1 className="text-5xl font-extrabold bg-linear-to-r from-[#4f39f6] to-[#9514fa] bg-clip-text text-transparent pb-2">DigiTools</h1>
+                    <h1 className="text-2xl md:text-3xl lg:text-5xl font-extrabold bg-linear-to-r from-[#4f39f6] to-[#9514fa] bg-clip-text text-transparent pb-2">DigiTools</h1>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="flex menu-horizontal px-1 capitalize gap-10 font-semibold text-[16px]">
                         {links.map((link, i) => <NavLinks key={i} link={link}></NavLinks>)}
                     </ul>
                 </div>
-                <div className="navbar-end gap-4">
-                    <div className='indicator'>
-                        <span className={`indicator-item bg-secondary w-5 h-5 rounded-full text-white flex items-center justify-center text-[12px] ${cartNum == 0? "hidden":""}`}>{cartNum}</span>
+                <div className="navbar-end gap-2 lg:gap-4">
+                    <div className='indicator hidden lg:flex'>
+                        <span className={`indicator-item bg-secondary w-5 h-5 rounded-full text-white flex items-center justify-center text-[12px] ${cartNum == 0 ? "hidden" : ""}`}>{cartNum}</span>
                         <ShoppingCart />
                     </div>
                     <a href="" className='font-semibold hover:text-black/50 transition-colors'>Login</a>
