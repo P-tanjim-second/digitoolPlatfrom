@@ -10,7 +10,7 @@ const Navbar = () => {
     }
 
     return (
-        <div className="navbar bg-base-100 shadow-sm">
+        <div className="navbar bg-base-100 shadow-sm sticky">
             <div className='navbar max-w-11/12 mx-auto flex p-0'>
                 <div className="navbar-start h-full">
                     <div className="dropdown">
@@ -36,7 +36,7 @@ const Navbar = () => {
                         <ShoppingCart />
                     </div>
                     <a href="" className='font-semibold hover:text-black/50 transition-colors'>Login</a>
-                    <a className="btn rounded-full relative bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white before:absolute before:inset-0 before:bg-linear-to-r before:from-[#9514fa] before:to-[#4f39f6] before:opacity-0 hover:before:opacity-100 before:transition-opacity before:rounded-full"><span className='relative z-10'>Get Started</span></a>
+                    <a className="btn border-none shadow-[0px_3px_5px_0px_rgba(0,0,0,0.3)] rounded-full relative bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white before:absolute before:inset-0 before:bg-linear-to-r before:from-[#9514fa] before:to-[#4f39f6] before:opacity-0 hover:before:opacity-100 before:transition-opacity before:rounded-full"><span className='relative z-10'>Get Started</span></a>
                 </div>
             </div>
         </div>
