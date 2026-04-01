@@ -14,7 +14,7 @@ const Product = ({ product, handleCartCount, cartProducts }) => {
     }
 
     return (
-        <div className="card w-96 bg-base-100 shadow-sm text-left scale-[0.9]">
+        <div className="card w-96 bg-base-100 shadow-sm text-left scale-[0.9] cartRevelScroll" style={{ animationRange: `entry ${10 + product.id * 5}% cover 30%` }}>
             <div className="card-body">
                 <div className='flex justify-between'>
                     <div className='w-15 h-15 p-3.5 rounded-full border-2 border-[#919191]/10'><img className='w-full' src={`/assets/products/${product.icon}`} /></div>

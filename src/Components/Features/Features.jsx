@@ -27,7 +27,7 @@ const Features = ({ cartNum, handleCartCount, cartProducts}) => {
                 <button className={`rounded-full cursor-pointer p-3 relative ${active == "products" ? "text-white" : "text-black"} transition-all`}>
                     <span className='relative z-10 p-3 pl-0' onClick={() => handleClick("products")}>Products</span>
                 </button>
-                <button className={`relative cursor-pointer z-10 rounded-full p-3 ${active == "Products" ? "text-white" : "text-black"} transition-all`} onClick={() => handleClick("Products")}>
+                <button className={`relative cursor-pointer z-10 rounded-full p-3 ${active == "carts" ? "text-white" : "text-black"} transition-all`} onClick={() => handleClick("carts")}>
                     Cart ({cartNum})
                 </button>
             </div>

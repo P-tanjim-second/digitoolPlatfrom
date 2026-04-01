@@ -9,7 +9,7 @@ const Navbar = ({cartNum}) => {
     }
 
     return (
-        <div className="navbar bg-base-100 shadow-sm sticky top-0 z-50">
+        <div className="navbar bg-base-100 shadow-sm sticky top-0 z-50 navCome">
             <div className='navbar w-[95%] lg:max-w-11/12 mx-auto flex p-0'>
                 <div className="navbar-start h-full">
                     <div className="dropdown">

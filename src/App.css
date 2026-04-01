@@ -1,24 +1,217 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 @import "tailwindcss";
 @plugin "daisyui";
-#root{
+
+#root {
     font-family: 'Manrope';
 }
 
-.buttonSlide{
+.buttonSlide {
     animation: buttonSliding 500ms ease-out;
 }
+
 @keyframes buttonSliding {
-    0%{
+    0% {
         transform: scaleX(1) scaleY(1);
     }
-    50%{
+
+    50% {
         transform: scaleX(1.2) scaleY(0.8);
     }
-    80%{
+
+    80% {
         transform: scaleX(0.8) scaleY(1.2);
     }
-    100%{
+
+    100% {
         transform: scaleX(1) scaleY(1);
+    }
+}
+
+.cartRevelScroll {
+    animation: cartRevel both;
+    animation-timeline: view();
+    /* animation-range: entry 10% cover 30%; */
+}
+
+.cartRevel {
+    animation: cartRevel 0.555s ease-out;
+}
+
+.typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    border-right: 2px solid transparent;
+}
+
+.typewriter {
+    position: relative;
+    animation: typewriter steps(30) both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 60%;
+}
+
+.typewriter::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    border-right: 2px solid currentColor;
+    animation: blink 0.7s step-end infinite;
+}
+@keyframes typewriter {
+    from { width: 0; }
+    to { width: 82%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+@keyframes cartRevel {
+    from {
+        transform: translateY(150px);
+        filter: blur(10px);
+        opacity: 0.5;
+    }
+
+    to {
+        transform: translateY(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+.iconShow::before{
+    content: "🌟";
+    position: absolute;
+    top: -30px;
+    left: -35px;
+    transform: rotate(45deg);
+    font-size: 40px;
+    animation: iconShow both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 30%;
+    z-index: -1;
+}
+@keyframes iconShow {
+    from{
+        top: 0px;
+        left: 0px;
+        opacity: 0;
+    }
+    to{
+        top: -30px;
+        left: -35px;
+        opacity: 1;
+    }
+}
+
+.imgRevel{
+    animation: imgRevel 0.5s ease-out;
+}
+@keyframes imgRevel {
+    from{
+        transform: translateY(150px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.navCome {
+    animation: navCome 0.5s ease-out;
+}
+@keyframes navCome {
+    from{
+        transform: translateY(-100%);
+    }
+    to{
+        transform: translateY(0%);
+    }
+}
+.comeLeft {
+    animation: comeLeft both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 30%;
+}
+@keyframes comeLeft {
+    from{
+        transform: translateX(-30%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+.comeRight {
+    animation: comeRight both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 30%;
+}
+@keyframes comeRight {
+    from{
+        transform: translateX(30%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+@keyframes scaleUp {
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+.scaleUp{
+    animation: scaleUp 0.6s ease;
+}
+.scaleUpScroll {
+    animation: scaleUp both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 30%;
+}
+.slideUpLeft {
+    animation: slideUpleft 0.5s ease-out;
+}
+@keyframes slideUpleft {
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+
+.slideUpRight {
+    animation: slideUpRight 0.5s ease-out;
+}
+@keyframes slideUpRight {
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+
+.remove{
+    animation: remove 0.4s ease forwards;
+}
+@keyframes remove {
+    0%{
+        scale: 1;
+        opacity: 1;
+    }
+    99%{
+        scale: 0;
+        opacity: 0;
+    }
+    100%{
+        display: none;
     }
 }
