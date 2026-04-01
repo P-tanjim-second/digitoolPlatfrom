@@ -1,8 +1,9 @@
 import { Bold } from 'lucide-react';
 import React, { useState, useRef } from 'react';
-import Carts from './Carts';
+import Products from './Products/Products';
+import Carts from './Carts/Carts';
 
-const Features = ({ cartNum, handleCartCount }) => {
+const Features = ({ cartNum, handleCartCount, cartProducts}) => {
     const [active, setActive] = useState("products");
     const blobRef = useRef(null);
 
@@ -24,14 +25,16 @@ const Features = ({ cartNum, handleCartCount }) => {
             <div className="buttons flex gap-5 rounded-full border-2 text-white border-[#919191]/20 p-1 relative mb-10">
                 <div ref={blobRef} className={`absolute top-1 bottom-1 buttonSlide ${active == "products" ? "left-1 right-[54%]" : "left-[54%] right-1"} bg-linear-to-r from-[#4f39f6] to-[#9514fa] rounded-full transition-all duration-300`}></div>
                 <button className={`rounded-full cursor-pointer p-3 relative ${active == "products" ? "text-white" : "text-black"} transition-all`}>
-                    <span className='relative z-10' onClick={() => handleClick("products")}>Products</span>
+                    <span className='relative z-10 p-3 pl-0' onClick={() => handleClick("products")}>Products</span>
                 </button>
-                <button className={`relative cursor-pointer z-10 rounded-full p-3 ${active == "carts" ? "text-white" : "text-black"} transition-all`} onClick={() => handleClick("carts")}>
+                <button className={`relative cursor-pointer z-10 rounded-full p-3 ${active == "Products" ? "text-white" : "text-black"} transition-all`} onClick={() => handleClick("Products")}>
                     Cart ({cartNum})
                 </button>
             </div>
 
-            <Carts handleCartCount={handleCartCount}></Carts>
+            {
+                active === "products" ? <Products handleCartCount={handleCartCount} cartProducts={cartProducts}></Products> : <Carts handleCartCount={handleCartCount} cartProducts={cartProducts}></Carts>
+            }
         </div>
     );
 };

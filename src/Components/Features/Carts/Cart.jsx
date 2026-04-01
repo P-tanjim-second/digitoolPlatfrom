@@ -1,0 +1,22 @@
+import React from 'react';
+import { toast } from 'react-toastify';
+
+const Cart = ({ product, handleCartCount}) => {
+    return (
+        <div className='bg-[#f9fafc] rounded-lg p-5 flex gap-2 items-center'>
+            <div className='w-13 h-13 bg-white rounded-full p-3'>
+                <img className='w-full' src={`/assets/products/${product.icon}`} />
+            </div>
+            <div className='flex flex-col'>
+                <p className='font-bold text-base'>{product.name}</p>
+                <p className='text-[15px] text-[#627382]'>${product.price}</p>
+            </div>
+            <button className='ml-auto text-[#ff3980] font-bold cursor-pointer' onClick={() => {
+                handleCartCount(-1, product.id, "cut")
+                toast.success(`You remove ${product.name} feature from you cart`, {autoClose: 1500})
+                }}>Remove</button>
+        </div>
+    );
+};
+
+export default Cart;

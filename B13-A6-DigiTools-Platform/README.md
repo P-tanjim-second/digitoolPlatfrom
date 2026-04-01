@@ -125,7 +125,7 @@ Create 6–10 product data with:
 ### ❌ Implement Selected product remove functionality 
 - On Click Remove Button product will remove from cart section.
 
-- In this section the total of the selected products ( added on the carts) will show here. 
+- In this section the total of the selected products ( added on the Products) will show here. 
 - Proceed to checkout button will remove all the products from the cart  
 
 
