@@ -5,6 +5,10 @@
 #root {
     font-family: 'Manrope';
 }
+html {
+  scroll-behavior: smooth;
+}
+
 
 .buttonSlide {
     animation: buttonSliding 500ms ease-out;

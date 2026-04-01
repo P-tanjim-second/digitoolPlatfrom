@@ -2,7 +2,7 @@ import React from 'react';
 
 const Price = () => {
     return (
-        <div className=' w-11/12 mx-auto py-28 text-center flex flex-col justify-center items-center space-y-7'>
+        <div id='Pricing' className=' w-11/12 mx-auto py-28 text-center flex flex-col justify-center items-center space-y-7'>
             <div className='text-center iconShow relative'>
                 <h1 className='text-[#101727] text-3xl lg:text-4xl xl:text-5xl font-bold lg:leading-18 xl:leading-20'>Simple, Transparent Pricing</h1>
                 <p className='text-[#627382] mx-auto'>Choose the plan that fits your needs. Upgrade or downgrade anytime.</p>

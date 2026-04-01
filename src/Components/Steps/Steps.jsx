@@ -2,7 +2,7 @@ import React from 'react';
 
 const Steps = () => {
     return (
-        <div className=' mx-auto mt-28 py-28 text-center flex flex-col justify-center items-center space-y-5 bg-[#f9fafc]'>
+        <div id='Features' className=' mx-auto mt-28 py-28 text-center flex flex-col justify-center items-center space-y-5 bg-[#f9fafc]'>
             <div className='text-center'>
                 <h1 className='text-[#101727] text-3xl lg:text-4xl xl:text-5xl font-bold lg:leading-18 xl:leading-20'>Get Started in 3 Steps</h1>
                 <p className='text-[#627382] mx-auto typewriter'>Start using premium digital tools in minutes, not hours.</p>

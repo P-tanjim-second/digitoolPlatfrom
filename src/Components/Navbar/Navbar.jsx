@@ -2,10 +2,10 @@ import { ShoppingCart } from 'lucide-react';
 
 const links = ["Products", "Features", "Pricing", "Testimonials", "FAQ"]
 
-const Navbar = ({cartNum}) => {
+const Navbar = ({cartNum, setActive}) => {
     
     const NavLinks = ({ link }) => {
-        return <li><a className='hover:text-black/50 transition-colors cursor-pointer'>{link}</a></li>
+        return <li><a className='hover:text-black/50 transition-colors cursor-pointer' href={`#${link}`}>{link}</a></li>
     }
 
     return (
@@ -22,7 +22,7 @@ const Navbar = ({cartNum}) => {
                             {links.map((link, i) => <NavLinks key={i} link={link}></NavLinks>)}
                             <div className='indicator'>
                                 <span className={`indicator-item bg-secondary w-4 h-4 translate-x-1/3 rounded-full text-white flex items-center justify-center text-[12px] ${cartNum == 0 ? "hidden" : ""}`}>{cartNum}</span>
-                                <li><a className='hover:text-black/50 transition-colors cursor-pointer'><ShoppingCart size={14} /> Cart</a></li></div>
+                                <li><a className='hover:text-black/50 transition-colors cursor-pointer' href="#Products" onClick={() => setActive("carts")}><ShoppingCart size={14} /> Cart</a></li></div>
                         </ul>
                     </div>
                     <h1 className="text-2xl md:text-3xl lg:text-5xl font-extrabold bg-linear-to-r from-[#4f39f6] to-[#9514fa] bg-clip-text text-transparent pb-2">DigiTools</h1>
@@ -35,10 +35,10 @@ const Navbar = ({cartNum}) => {
                 <div className="navbar-end gap-2 lg:gap-4">
                     <div className='indicator hidden lg:flex'>
                         <span className={`indicator-item bg-secondary w-5 h-5 rounded-full text-white flex items-center justify-center text-[12px] transition-transform ${cartNum == 0 ? "scale-0" : "scale-100"}`}>{cartNum}</span>
-                        <ShoppingCart />
+                        <a href="#Products" onClick={() => setActive("carts")}><ShoppingCart /></a>
                     </div>
                     <a href="" className='font-semibold hover:text-black/50 transition-colors'>Login</a>
-                    <a className="btn border-none shadow-[0px_3px_5px_0px_rgba(0,0,0,0.3)] rounded-full relative bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white before:absolute before:inset-0 before:bg-linear-to-r before:from-[#9514fa] before:to-[#4f39f6] before:opacity-0 hover:before:opacity-100 before:transition-opacity before:rounded-full"><span className='relative z-10'>Get Started</span></a>
+                    <a href='#Pricing' className="btn border-none shadow-[0px_3px_5px_0px_rgba(0,0,0,0.3)] rounded-full relative bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white before:absolute before:inset-0 before:bg-linear-to-r before:from-[#9514fa] before:to-[#4f39f6] before:opacity-0 hover:before:opacity-100 before:transition-opacity before:rounded-full"><span className='relative z-10'>Get Started</span></a>
                 </div>
             </div>
         </div>

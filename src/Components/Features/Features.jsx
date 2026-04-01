@@ -1,10 +1,11 @@
 import { Bold } from 'lucide-react';
-import React, { useState, useRef } from 'react';
+import React, { useRef } from 'react';
 import Products from './Products/Products';
 import Carts from './Carts/Carts';
 
-const Features = ({ cartNum, handleCartCount, cartProducts}) => {
-    const [active, setActive] = useState("products");
+const Features = ({ cartNum, handleCartCount, cartProducts, active, setActive}) => {
+    
+    
     const blobRef = useRef(null);
 
     const handleClick =(val) => {
@@ -16,7 +17,7 @@ const Features = ({ cartNum, handleCartCount, cartProducts}) => {
     }
 
     return (
-        <div className='w-11/12 mx-auto mt-28 text-center flex flex-col justify-center items-center space-y-5'>
+        <div id='Products' className='w-11/12 mx-auto mt-28 text-center flex flex-col justify-center items-center space-y-5'>
             <div className='text-center'>
                 <h1 className='text-[#101727] text-3xl lg:text-4xl xl:text-5xl font-bold lg:leading-18 xl:leading-20'>Premium Digital Tools</h1>
                 <p className='text-[#627382] lg:w-[70%] mx-auto'>Choose from our curated collection of premium digital products designed
@@ -33,7 +34,7 @@ const Features = ({ cartNum, handleCartCount, cartProducts}) => {
             </div>
 
             {
-                active === "products" ? <Products handleCartCount={handleCartCount} cartProducts={cartProducts}></Products> : <Carts handleCartCount={handleCartCount} cartProducts={cartProducts}></Carts>
+                active === "products" ? <Products key={"active"} handleCartCount={handleCartCount} cartProducts={cartProducts}></Products> : <Carts key={"active"} handleCartCount={handleCartCount} cartProducts={cartProducts}></Carts>
             }
         </div>
     );

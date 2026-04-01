@@ -19,7 +19,7 @@ const Banner = () => {
                     </p>
                 </div>
                 <div className="buttons flex gap-5">
-                    <button className='bg-linear-to-r hover:scale-[1.02] transition-transform relative cursor-pointer from-[#4f39f6] to-[#9514fa] text-white rounded-full border-none px-3 py-3.25 text-[14px] font-semibold before:absolute before:inset-0 before:bg-linear-to-r before:from-[#9514fa] before:to-[#4f39f6] before:opacity-0 hover:before:opacity-100 before:transition-opacity before:rounded-full'><span className='relative z-10'>Explore Products</span></button>
+                    <a type='button' href='#Products' className='bg-linear-to-r hover:scale-[1.02] transition-transform relative cursor-pointer from-[#4f39f6] to-[#9514fa] text-white rounded-full border-none px-3 py-3.25 text-[14px] font-semibold before:absolute before:inset-0 before:bg-linear-to-r before:from-[#9514fa] before:to-[#4f39f6] before:opacity-0 hover:before:opacity-100 before:transition-opacity before:rounded-full'><span className='relative z-10'>Explore Products</span></a>
                     <button className=' border-none px-3 hover:scale-[1.02] transition-transform cursor-pointer py-3.25 text-[14px] font-semibold rounded-full relative bg-linear-to-r from-[#4f39f6] to-[#9514fa]'>
                         <span className='absolute inset-0.5 rounded-full bg-white z-0 '></span>
                         <span className='flex justify-center items-center gap-2 relative z-10'>
