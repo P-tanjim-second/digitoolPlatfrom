@@ -14,15 +14,15 @@ const Product = ({ product, handleCartCount, cartProducts }) => {
     }
 
     return (
-        <div className="card w-96 bg-base-100 shadow-sm text-left">
+        <div className="card w-96 bg-base-100 shadow-sm text-left scale-[0.9]">
             <div className="card-body">
                 <div className='flex justify-between'>
                     <div className='w-15 h-15 p-3.5 rounded-full border-2 border-[#919191]/10'><img className='w-full' src={`/assets/products/${product.icon}`} /></div>
                     <span className={`px-3 w-fit h-fit text-[14px] rounded-full ml-auto font-medium ${product.tagType === "best-seller" ? badgeStyle.bestSeller.join(" ") : product.tagType === "popular" ? badgeStyle.popular.join(" ") : badgeStyle.new.join(" ")}`}>{product.tag}</span>
                 </div>
                 <div className="flex justify-between flex-col gap-3">
-                    <h2 className="text-3xl font-bold">{product.name}</h2>
-                    <p className='text-[#627382]'>{product.description}</p>
+                    <h2 className="text-2xl lg:text-3xl font-bold">{product.name}</h2>
+                    <p className='text-[#627382] text-[14px] lg:text-base '>{product.description}</p>
                     <span className="text-xl"><span className='font-bold'>${product.price}</span><span className='text-[14px] text-[#627382]'>/{product.period}</span></span>
                 </div>
                 <ul className="mt-6 flex flex-col gap-2 text-xs">
