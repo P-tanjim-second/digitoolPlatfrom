@@ -9,6 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Steps from './Components/Steps/Steps'
 import Price from './Components/Price/Price'
 import TransformWorkflow from './Components/transformWorkflow/transformWorkflow'
+import Footer from './Components/Footer/Footer'
 
 function App() {
   const [cartNum, setCartNum] = useState(0)
@@ -27,6 +28,7 @@ function App() {
       <Steps></Steps>
       <Price></Price>
       <TransformWorkflow></TransformWorkflow>
+      <Footer></Footer>
     </>
   )
 }
