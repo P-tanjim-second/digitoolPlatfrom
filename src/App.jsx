@@ -6,6 +6,7 @@ import Features from './Components/Features/Features'
 import { useState } from 'react'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
+import Steps from './Components/Steps/Steps'
 
 function App() {
   const [cartNum, setCartNum] = useState(0)
@@ -21,6 +22,7 @@ function App() {
       <Banner></Banner>
       <State></State>
       <Features cartNum={cartNum} handleCartCount={handleCartCount} cartProducts={cartProducts}></Features>
+      <Steps></Steps>
     </>
   )
 }
