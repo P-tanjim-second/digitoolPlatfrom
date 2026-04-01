@@ -4,3 +4,21 @@
 #root{
     font-family: 'Manrope';
 }
+
+.buttonSlide{
+    animation: buttonSliding 500ms ease-out;
+}
+@keyframes buttonSliding {
+    0%{
+        transform: scaleX(1) scaleY(1);
+    }
+    50%{
+        transform: scaleX(1.2) scaleY(0.8);
+    }
+    80%{
+        transform: scaleX(0.8) scaleY(1.2);
+    }
+    100%{
+        transform: scaleX(1) scaleY(1);
+    }
+}

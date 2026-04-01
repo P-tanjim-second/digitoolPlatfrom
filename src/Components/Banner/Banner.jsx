@@ -1,5 +1,5 @@
 import React from 'react';
-import bannerImg from '../../assets/banner.png'
+import bannerImg from '../../../public/assets/banner.png'
 import { Play } from 'lucide-react';
 
 const Banner = () => {

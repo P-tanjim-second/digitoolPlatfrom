@@ -1,16 +1,15 @@
-import React, { useState } from 'react';
 import { ShoppingCart } from 'lucide-react';
 
 const links = ["Products", "Features", "Pricing", "Testimonials", "FAQ"]
 
-const Navbar = () => {
-    const [cartNum, setCartNum] = useState(0)
+const Navbar = ({cartNum}) => {
+    
     const NavLinks = ({ link }) => {
         return <li><a className='hover:text-black/50 transition-colors cursor-pointer'>{link}</a></li>
     }
 
     return (
-        <div className="navbar bg-base-100 shadow-sm sticky">
+        <div className="navbar bg-base-100 shadow-sm sticky top-0 z-50">
             <div className='navbar w-[95%] lg:max-w-11/12 mx-auto flex p-0'>
                 <div className="navbar-start h-full">
                     <div className="dropdown">
@@ -35,7 +34,7 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end gap-2 lg:gap-4">
                     <div className='indicator hidden lg:flex'>
-                        <span className={`indicator-item bg-secondary w-5 h-5 rounded-full text-white flex items-center justify-center text-[12px] ${cartNum == 0 ? "hidden" : ""}`}>{cartNum}</span>
+                        <span className={`indicator-item bg-secondary w-5 h-5 rounded-full text-white flex items-center justify-center text-[12px] transition-transform ${cartNum == 0 ? "scale-0" : "scale-100"}`}>{cartNum}</span>
                         <ShoppingCart />
                     </div>
                     <a href="" className='font-semibold hover:text-black/50 transition-colors'>Login</a>
