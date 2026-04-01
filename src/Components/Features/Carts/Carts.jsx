@@ -26,7 +26,7 @@ const Carts = ({ handleCartCount, cartProducts }) => {
                 <p className='font-bold text-lg'>${cartProducts.length ===0 ? "0": totalPrice()}</p>
             </div>
             <button className={`btn btn-block bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white rounded-full ${cartProducts.length === 0 ? "pointer-events-none": ""}`} onClick={() => {
-                toast.warning("You clear your carts", {autoClose: 1500})
+                toast.success( `Cart proceed. Total amount: $${totalPrice()}`, {autoClose: 1500})
                 handleCartCount(0, null, "clear", 0);
             }}>Proceed to Checkout</button>
         </div> 

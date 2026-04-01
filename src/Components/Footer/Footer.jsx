@@ -35,13 +35,13 @@ const Footer = () => {
                 <h3 className='footer-title'>Social Links</h3>
                 <div className='text-black flex gap-2'>
                     <div className='p-4 bg-white w-10 h-10 rounded-full flex items-center justify-center text-[20px]'>
-                        <i class="fa-brands fa-square-facebook"></i>
+                        <i className="fa-brands fa-square-facebook"></i>
                     </div>
                     <div className='p-4 bg-white w-10 h-10 rounded-full flex items-center justify-center text-[20px]'>
-                        <i class="fa-brands fa-square-instagram"></i>
+                        <i className="fa-brands fa-square-instagram"></i>
                     </div>
                     <div className='p-4 bg-white w-10 h-10 rounded-full flex items-center justify-center text-[20px]'>
-                        <i class="fa-brands fa-x-twitter"></i>
+                        <i className="fa-brands fa-x-twitter"></i>
                     </div>
                 </div>
             </div>
